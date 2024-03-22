@@ -11,10 +11,7 @@ personagens.forEach((personagem) =>{
 
         removerSelecaoDoPersonagem();
         personagem.classList.add('selecionado');
-        removerCorSelecao();
-        personagem.classList.add('naoselecionado');
-        alterarCorPersonagemSelecionado();
-        personagem.classList.add('selecionadoCor');
+        
        
 
         alterarImagemPersonagemSelecionado(personagem);
@@ -43,18 +40,8 @@ function alterarImagemPersonagemSelecionado(personagem){
     imagemPersonagemGrande.src = `./assets/images/card-${idPersonagem}.png`;
 }
 
-function alterarCorPersonagemSelecionado(personagem){
-    const imagemPersonagemCard = document.querySelector('.selecionadoCor');
-    const idPersonagem = personagem.attributes.id.value;
-    imagemPersonagemCard.src = `./assets/images/card-${idPersonagem}.jpg`;
-}
 
 function removerSelecaoDoPersonagem (){
     const personagemSelecionado = document.querySelector('.selecionado');
     personagemSelecionado.classList.remove('selecionado');
-}
-
-function removerCorSelecao (){
-    const personagemNaoSelecionado = document.querySelector('.naoselecionado');
-    personagemNaoSelecionado.classList.remove('naoselecionado');
 }
